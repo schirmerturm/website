@@ -14,8 +14,13 @@
   },
   "dependencies": {
     "gatsby": "^2.15.15",
+    "gatsby-plugin-typography": "^2.3.7",
+    "gatsby-source-contentful": "^2.1.36",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
