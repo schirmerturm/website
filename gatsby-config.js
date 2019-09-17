@@ -1,9 +1,10 @@
+const path = require('path')
 let contentfulConfig
 
 // Check if we can load contentful config from the json file
 try {
-  contentfulConfig = require('./.contentful') 
-} catch(_) {}
+  contentfulConfig = require('./.contentful')
+} catch (_) { }
 
 // Overwrite with env variables if available
 contentfulConfig = {
@@ -13,6 +14,7 @@ contentfulConfig = {
 
 module.exports = {
   plugins: [
+    `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -24,6 +26,13 @@ module.exports = {
       options: {
         ...contentfulConfig,
         downloadLocal: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
   ],

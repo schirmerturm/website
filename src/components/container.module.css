@@ -4,8 +4,8 @@
 }
 
 .content {
-  max-width: 600px;
+  max-width: 900px;
   flex-basis: 100%;
-  padding: 20px;
+  padding: 60px;
   text-align: left;
 }
