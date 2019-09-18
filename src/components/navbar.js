@@ -18,7 +18,7 @@ export default ({ children }) => {
     window.addEventListener("scroll", handleScroll)
 
     return function cleanup() {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener("scroll", handleScroll)
     }
   })
 
@@ -37,44 +37,63 @@ export default ({ children }) => {
       `}
       render={data => (
         <div>
-          <div className={navbarStyles.navMain} style={
-            hasScrolled ? {
-              backgroundColor: 'white'
-            } : {
-              backgroundColor: 'none'
+          <div
+            className={navbarStyles.navMain}
+            style={
+              hasScrolled
+                ? {
+                    backgroundColor: "white",
+                  }
+                : {
+                    backgroundColor: "none",
+                  }
             }
-          }>
-          <div className={navbarStyles.leftContainer}>
-                <Link to="/">
-                  <div
-                    style={
-                      hasScrolled
-                        ? {
-                            height: 30,
-                            width: 15,
-                          }
-                        : {
-                            height: 80,
-                            width: 40,
-                          }
-                    }
-                    className={navbarStyles.logo}
-                  >
-                    <Img fluid={data.file.childImageSharp.fluid} />
-                  </div>
+          >
+            <div className={navbarStyles.leftContainer}>
+              <Link to="/">
+                <div
+                  style={
+                    hasScrolled
+                      ? {
+                          height: 30,
+                          width: 15,
+                        }
+                      : {
+                          height: 80,
+                          width: 40,
+                        }
+                  }
+                  className={navbarStyles.logo}
+                >
+                  <Img fluid={data.file.childImageSharp.fluid} />
+                </div>
+              </Link>
+            </div>
+            <div className={navbarStyles.rightContainer}>
+              <Link className={navbarStyles.underline} to="/about">
+                Über Pfadi
+              </Link>
+              <Dropdown titleClassName={navbarStyles.underline} title="Stufen">
+                <Link className={navbarStyles.underline} to="/stufen/biber">
+                  Biber
                 </Link>
-              </div>
-              <div className={navbarStyles.rightContainer}>
-                <Link className={navbarStyles.underline} to='/about'>Über Pfadi</Link>
-                <Dropdown titleClassName={navbarStyles.underline} title="Stufen">
-                  <Link className={navbarStyles.underline} to="/stufen/biber">Biber</Link>
-                  <Link className={navbarStyles.underline} to="/stufen/wölfe">Wölfe</Link>
-                  <Link className={navbarStyles.underline} to="/stufen/pfader">Pfadi</Link>
-                  <Link className={navbarStyles.underline} to="/stufen/pios">Pios</Link>
-                </Dropdown>
-                <Link className={navbarStyles.underline} to='/fotos'>Fotos</Link>
-                <Link className={navbarStyles.underline} to='/FAQ'>FAQs</Link>
-              </div>
+                <Link className={navbarStyles.underline} to="/stufen/wölfe">
+                  Wölfe
+                </Link>
+                <Link className={navbarStyles.underline} to="/stufen/pfadi">
+                  Pfadi
+                </Link>
+                <Link className={navbarStyles.underline} to="/stufen/pio">
+                  Pios
+                </Link>
+              </Dropdown>
+              <Link className={navbarStyles.underline} to="/fotos">
+                Fotos
+              </Link>
+              <Link className={navbarStyles.underline} to="/FAQ">
+                FAQs
+              </Link>
+            </div>
           </div>
           {children}
         </div>

@@ -10,10 +10,14 @@ export default ({ data }) => {
 
   return <NavBar>
     <div className={indexStyles.cover}>
-      <BackgroundImage fluid={imageData} className={indexStyles.bgimage}>
-        <Container>
+      <BackgroundImage style={{
+        backgroundAttachment: 'fixed'
+
+      }} fluid={imageData} className={indexStyles.bgimage}>
+        <div className={indexStyles.center}>
           <h1>Pfadi Schirmerturm</h1>
-        </Container>
+          <h3>Die Stadtpfadi Luzern</h3>
+        </div>
       </BackgroundImage>
     </div>
     <div className={indexStyles.halfcover}>

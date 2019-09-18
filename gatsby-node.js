@@ -26,6 +26,15 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
+    allContentfulSeite {
+      nodes {
+        titel
+        route
+        inhalt {
+          json
+        }
+      }
+    }
   }
   `)
   result.data.allContentfulStufe.nodes.forEach((node) => {
@@ -47,5 +56,15 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     }
   });
-  
+
+  result.data.allContentfulSeite.nodes.forEach((node) => {
+    createPage({
+      path: node.route,
+      component: path.resolve(`./src/templates/page.js`),
+      context: {
+        route: node.route
+      }
+    })
+  })
+
 }

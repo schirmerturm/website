@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../components/container'
+import Layout from '../components/layout'
 import moment from 'moment'
 import { graphql } from 'gatsby'
 import UeberStufe from '../components/ueber-stufe'
@@ -14,12 +14,12 @@ export default ({ data }) => {
   }
 
   return (
-    <Container>
+    <Layout>
       <UeberStufe stufe={stufe}/>
       <h2>Anschlag</h2>
       <b>Start:</b> {formatTime(anschlag.startzeit)} <br />
       <b>Ende:</b> {formatTime(anschlag.endzeit)}
-    </Container>
+    </Layout>
   )
 }
 

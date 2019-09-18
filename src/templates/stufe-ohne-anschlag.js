@@ -1,14 +1,14 @@
 import React from 'react';
-import Container from '../components/container'
+import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import UeberStufe from '../components/ueber-stufe'
 
 export default ({ data }) => {
   const stufe = data.contentfulStufe
   return (
-    <Container>
+    <Layout>
       <UeberStufe stufe={stufe}/>
-    </Container>
+    </Layout>
   )
 }
 
