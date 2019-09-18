@@ -37,7 +37,7 @@ export const query = graphql`
   query {
     file(relativePath: {eq: "cover.JPG"}) {
       childImageSharp {
-        fluid(quality: 90, maxWidth: 1920) {
+        fluid(quality: 60) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
