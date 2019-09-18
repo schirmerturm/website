@@ -7,10 +7,8 @@
   width: 90vw;
   position: absolute;
   right: 0;
-}
-
-.title {
-  color: black;
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdownContainer {

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import navbarStyles from "./navbar.module.css"
 import { Link, graphql, StaticQuery } from "gatsby"
 import Dropdown from "../components/dropdown"
@@ -7,11 +7,18 @@ import Img from "gatsby-image"
 export default ({ children }) => {
   const [hasScrolled, setHasScrolled] = useState(false)
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      setHasScrolled(true)
-    } else {
-      setHasScrolled(false)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setHasScrolled(true)
+      } else {
+        setHasScrolled(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+
+    return function cleanup() {
+      window.removeEventListener('scroll', handleScroll)
     }
   })
 
@@ -30,18 +37,22 @@ export default ({ children }) => {
       `}
       render={data => (
         <div>
-          <div className={navbarStyles.navMain}>
+          <div className={navbarStyles.navMain} style={
+            hasScrolled ? {} : {
+              background: 'none'
+            }
+          }>
           <div className={navbarStyles.leftContainer}>
                 <Link to="/">
                   <div
                     style={
                       hasScrolled
                         ? {
-                            height: 20,
-                            width: 20,
+                            height: 30,
+                            width: 15,
                           }
                         : {
-                            height: 40,
+                            height: 80,
                             width: 40,
                           }
                     }
@@ -52,9 +63,14 @@ export default ({ children }) => {
                 </Link>
               </div>
               <div className={navbarStyles.rightContainer}>
+                <Link to='/about'>Über Pfadi</Link>
                 <Dropdown title="Stufen">
+                  <Link to="/stufen/biber">Biber</Link>
+                  <Link to="/stufen/wölfe">Wölfe</Link>
                   <Link to="/stufen/pfader">Pfadi</Link>
+                  <Link to="/stufen/pios">Pios</Link>
                 </Dropdown>
+                <Link to='/FAQ'>FAQs</Link>
               </div>
           </div>
           {children}

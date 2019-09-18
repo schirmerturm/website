@@ -9,8 +9,8 @@ export default ({ title, children }) => {
   }
 
   return (
-    <div className={dropdownStyles.dropdownContainer}>
-      <a className={dropdownStyles.title} onClick={toggleCollapse}>
+    <div className={dropdownStyles.dropdownContainer} onMouseEnter={toggleCollapse} onMouseLeave={toggleCollapse}>
+      <a className={dropdownStyles.title}>
         {title}
       </a>
       {isCollapsed || <div className={dropdownStyles.dropdownBox}>
