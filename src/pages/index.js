@@ -16,6 +16,16 @@ export default ({ data }) => {
         </Container>
       </BackgroundImage>
     </div>
+    <div className={indexStyles.halfcover}>
+      <Container>
+        <h1>News</h1>
+      </Container>
+    </div>
+    <div className={indexStyles.halfcover}>
+      <Container>
+        <h1>Was ist pfadi?</h1>
+      </Container>
+    </div>
   </NavBar>
 }
 

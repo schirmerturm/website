@@ -1,0 +1,18 @@
+.dropdownBox {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+  max-width: 200px;
+  width: 90vw;
+  position: absolute;
+  right: 0;
+}
+
+.title {
+  color: black;
+}
+
+.dropdownContainer {
+  position: relative;
+}
