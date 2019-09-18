@@ -1,5 +1,5 @@
 .dropdownBox {
-  border: 1px solid black;
+  border: 1px solid rgb(182, 182, 182);
   border-radius: 5px;
   padding: 20px;
   background-color: white;
@@ -9,6 +9,10 @@
   right: 0;
   display: flex;
   flex-direction: column;
+}
+
+.dropdownBox > * {
+  padding-top: 5px;
 }
 
 .dropdownContainer {

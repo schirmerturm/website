@@ -38,8 +38,10 @@ export default ({ children }) => {
       render={data => (
         <div>
           <div className={navbarStyles.navMain} style={
-            hasScrolled ? {} : {
-              background: 'none'
+            hasScrolled ? {
+              backgroundColor: 'white'
+            } : {
+              backgroundColor: 'none'
             }
           }>
           <div className={navbarStyles.leftContainer}>
@@ -63,14 +65,15 @@ export default ({ children }) => {
                 </Link>
               </div>
               <div className={navbarStyles.rightContainer}>
-                <Link to='/about'>Über Pfadi</Link>
-                <Dropdown title="Stufen">
-                  <Link to="/stufen/biber">Biber</Link>
-                  <Link to="/stufen/wölfe">Wölfe</Link>
-                  <Link to="/stufen/pfader">Pfadi</Link>
-                  <Link to="/stufen/pios">Pios</Link>
+                <Link className={navbarStyles.underline} to='/about'>Über Pfadi</Link>
+                <Dropdown titleClassName={navbarStyles.underline} title="Stufen">
+                  <Link className={navbarStyles.underline} to="/stufen/biber">Biber</Link>
+                  <Link className={navbarStyles.underline} to="/stufen/wölfe">Wölfe</Link>
+                  <Link className={navbarStyles.underline} to="/stufen/pfader">Pfadi</Link>
+                  <Link className={navbarStyles.underline} to="/stufen/pios">Pios</Link>
                 </Dropdown>
-                <Link to='/FAQ'>FAQs</Link>
+                <Link className={navbarStyles.underline} to='/fotos'>Fotos</Link>
+                <Link className={navbarStyles.underline} to='/FAQ'>FAQs</Link>
               </div>
           </div>
           {children}
