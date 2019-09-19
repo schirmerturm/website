@@ -11,12 +11,16 @@ export default ({ data }) => {
 
   let logoImg
   let backgroundImg
+  let backgroundImg2
 
   data.allFile.nodes.forEach((node) => {
     if (node.relativePath == 'logoschrift.png') {
       logoImg = node.childImageSharp.fluid
     }
     if (node.relativePath == 'cover.JPG') {
+      backgroundImg2 = node.childImageSharp.fluid
+    }
+    if (node.relativePath == 'group.JPG') {
       backgroundImg = node.childImageSharp.fluid
     }
   })
@@ -37,6 +41,13 @@ export default ({ data }) => {
       <Container>
         <h1>News</h1>
       </Container>
+    </div>
+    <div className={indexStyles.cover}>
+      <BackgroundImage style={{
+        backgroundAttachment: 'fixed'
+      }} fluid={backgroundImg2} className={indexStyles.bgimage}>
+
+      </BackgroundImage>
     </div>
     <div className={indexStyles.halfcover}>
       <Container>

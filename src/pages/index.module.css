@@ -32,4 +32,6 @@
 
 .logoContainer {
   width: 80vw;
+  position: relative;
+  bottom: 20%;
 }

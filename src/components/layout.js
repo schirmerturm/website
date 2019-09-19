@@ -11,7 +11,7 @@ export default ({ children }) => {
       file(relativePath: {eq: "pano.jpeg"}) {
         childImageSharp {
           fluid(quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
