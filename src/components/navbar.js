@@ -45,7 +45,7 @@ export default ({ children }) => {
                     backgroundColor: "white",
                   }
                 : {
-                    backgroundColor: "none",
+                    background: "none",
                   }
             }
           >

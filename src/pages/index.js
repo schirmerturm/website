@@ -4,19 +4,32 @@ import indexStyles from "./index.module.css"
 import { graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import NavBar from '../components/navbar'
+import Img from "gatsby-image"
+
 
 export default ({ data }) => {
-  const imageData = data.file.childImageSharp.fluid
+
+  let logoImg
+  let backgroundImg
+
+  data.allFile.nodes.forEach((node) => {
+    if (node.relativePath == 'logoschrift.png') {
+      logoImg = node.childImageSharp.fluid
+    }
+    if (node.relativePath == 'cover.JPG') {
+      backgroundImg = node.childImageSharp.fluid
+    }
+  })
 
   return <NavBar>
     <div className={indexStyles.cover}>
       <BackgroundImage style={{
         backgroundAttachment: 'fixed'
-
-      }} fluid={imageData} className={indexStyles.bgimage}>
+      }} fluid={backgroundImg} className={indexStyles.bgimage}>
         <div className={indexStyles.center}>
-          <h1>Pfadi Schirmerturm</h1>
-          <h3>Die Stadtpfadi Luzern</h3>
+          <div className={indexStyles.logoContainer}>
+            <Img fluid={logoImg}></Img>
+          </div>
         </div>
       </BackgroundImage>
     </div>
@@ -35,11 +48,14 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    file(relativePath: {eq: "cover.JPG"}) {
-      childImageSharp {
-        fluid(quality: 60) {
-          ...GatsbyImageSharpFluid_withWebp
+    allFile {
+      nodes {
+        childImageSharp {
+          fluid(quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
         }
+        relativePath
       }
     }
   }

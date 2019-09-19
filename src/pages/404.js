@@ -1,7 +1,7 @@
 import React from "react"
-import Container from "../components/container.js"
+import Layout from "../components/layout"
 
-export default () => <Container>
+export default () => <Layout>
     <h1>404</h1>
     <p>Diese seite gibt's leider nicht :(</p>
-</Container>
+</Layout>
