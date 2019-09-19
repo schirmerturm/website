@@ -9,11 +9,7 @@ export default ({ children }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setHasScrolled(true)
-      } else {
-        setHasScrolled(false)
-      }
+      setHasScrolled(window.scrollY != 0);
     }
     window.addEventListener("scroll", handleScroll)
 
@@ -43,9 +39,11 @@ export default ({ children }) => {
               hasScrolled
                 ? {
                     backgroundColor: "white",
+                    boxShadow: '0px 7px 14px -4px rgba(99,99,99,0.1)'
                   }
                 : {
                     background: "none",
+                    boxShadow: 'none'
                   }
             }
           >
