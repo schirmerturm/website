@@ -63,7 +63,7 @@ export const query = graphql`
       nodes {
         childImageSharp {
           fluid(quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
         relativePath

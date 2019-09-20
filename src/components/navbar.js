@@ -9,7 +9,7 @@ export default ({ children }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setHasScrolled(window.scrollY != 0);
+      setHasScrolled(window.scrollY > 0);
     }
     window.addEventListener("scroll", handleScroll)
 
