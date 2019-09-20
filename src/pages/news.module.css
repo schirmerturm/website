@@ -1,0 +1,22 @@
+.post {
+  border: 1px solid #FF7F11;
+  border-radius: 4px;
+  padding: 25px;
+  margin-bottom: 30px;
+  max-height: 19.7em;
+  overflow: hidden;
+}
+
+.titleBar > h3 {
+  margin-top: 0;
+}
+
+.titleBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.date {
+  color: gray;
+}

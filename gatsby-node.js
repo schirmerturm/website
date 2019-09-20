@@ -1,9 +1,19 @@
 const path = require('path')
 
 exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+
   if (node.internal.type == "ContentfulStufe") {
     const slug = `/stufen/${node.name.toLowerCase()}`
-    const { createNodeField } = actions
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug
+    })
+  }
+
+  if (node.internal.type == "ContentfulNewspost") {
+    const slug = `/news/${node.contentful_id}`
     createNodeField({
       node,
       name: `slug`,
@@ -35,6 +45,13 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
+    allContentfulNewspost {
+      nodes {
+        fields {
+          slug
+        }
+      }
+    }
   }
   `)
   result.data.allContentfulStufe.nodes.forEach((node) => {
@@ -63,6 +80,16 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/page.js`),
       context: {
         route: node.route
+      }
+    })
+  })
+
+  result.data.allContentfulNewspost.nodes.forEach(node => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/newspost.js`),
+      context: {
+        slug: node.fields.slug
       }
     })
   })

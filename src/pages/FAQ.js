@@ -6,7 +6,7 @@ import FaqQuestion from '../components/faq-question'
 export default ({ data }) => {
   return <Layout>
     <h1>FAQs</h1>
-    <h3>Hier findest du eine Sammlung häufig gestellter Fragen</h3>
+    <h3 className='subTitle'>Hier findest du eine Sammlung häufig gestellter Fragen</h3>
     {
       data.allContentfulFaqFrage.nodes.map((node) => (
         <FaqQuestion question={node.frage.frage} answer={node.antwort.json}/>

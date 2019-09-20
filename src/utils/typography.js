@@ -9,6 +9,9 @@ fairyGateTheme.overrideThemeStyles = ({rhythm}, options) => ({
   },
   'a:hover': {
     textDecoration: 'underline'
+  },
+  'p': {
+    color: 'rgb(29, 29, 29)'
   }
 })
 

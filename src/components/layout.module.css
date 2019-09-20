@@ -1,5 +1,6 @@
 .headerImage {
   width: 100%;
+  border-bottom: 5px solid #FF7F11;
 }
 
 .fillBackground {
