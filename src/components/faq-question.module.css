@@ -1,0 +1,29 @@
+.container {
+  border: 1px solid #FF7F11;
+  border-radius: 4px;
+  transition: height 2s;
+  margin-bottom: 20px;
+}
+
+.question-container > h4 {
+  margin: 0;
+  padding: 15px;
+}
+
+.expanded {
+  padding: 15px;
+  max-height: 200px;
+  overflow: scroll;
+  border-top: 1px solid rgb(190, 190, 190);
+}
+
+.notExpanded {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  border-top: none;
+}
+
+.answerContainer {
+  transition: max-height 0.3s, padding 0.3s;
+}
