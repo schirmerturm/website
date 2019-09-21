@@ -7,3 +7,7 @@ html, body {
   margin-top: 0;
   margin-bottom: 40px;
 }
+
+p {
+  color: rgb(112, 112, 112);
+}

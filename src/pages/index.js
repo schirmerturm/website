@@ -7,6 +7,7 @@ import NavBar from "../components/navbar"
 import Img from "gatsby-image"
 import moment from "moment"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { FiChevronsDown } from "react-icons/fi"
 
 export default ({ data }) => {
   let logoImg
@@ -25,6 +26,14 @@ export default ({ data }) => {
     }
   })
 
+  function scrollDown() {
+    window.scroll({
+      top: window.innerHeight,
+      left: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <NavBar>
       <div className={indexStyles.cover}>
@@ -40,13 +49,20 @@ export default ({ data }) => {
               <Img fluid={logoImg}></Img>
             </div>
           </div>
+          <FiChevronsDown
+            className={indexStyles.scrollArrow}
+            size="6em"
+            onClick={scrollDown}
+          />
         </BackgroundImage>
       </div>
       <div className={indexStyles.halfcover}>
         <Container>
-          <div className={indexStyles.newsTitleBar}>
+          <div className={indexStyles.titleBar}>
             <h1>News</h1>
-            <span className={indexStyles.more}><Link to='/news'>Mehr news</Link></span>
+            <span className={indexStyles.more}>
+              <Link to="/news">Mehr news</Link>
+            </span>
           </div>
           <div className={indexStyles.newsPreviewContainer}>
             {data.allContentfulNewspost.nodes.map(node => (
@@ -74,7 +90,22 @@ export default ({ data }) => {
       </div>
       <div className={indexStyles.halfcover}>
         <Container>
-          <h1>Was ist pfadi?</h1>
+          <div className={indexStyles.titleBar}>
+            <h1>Was ist pfadi?</h1>
+            <span className={indexStyles.more}>
+              <Link to="/about">Mehr erfahren</Link>
+            </span>
+          </div>
+          <p>
+            Die Pfadi ist die grösste Jugendorganisation der Schweiz. Bei den
+            wöchentlichen Aktivitäten am Samstag Nachmittag und in den Lagern
+            erlebt man bei Spiel, Sport und Spass einzigartige Abenteuer,
+            entdeckt die Natur und findet Freunde fürs Leben! Um ein
+            Altersgerechtes Programm zu gewährleisten, werden die Kinder
+            entsprechend ihrem Alters in 4 verschiedene Stufen unterteilt
+            (Biber, 4-6 Jahre; Wölfli, 6-10 Jahre; Pfader 10-15 Jahre; Pios
+            15-17 Jahre)
+          </p>
         </Container>
       </div>
     </NavBar>
