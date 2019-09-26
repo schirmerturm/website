@@ -22,12 +22,16 @@
   color: white;
 }
 
+.submitButton:hover {
+  background-color: white;
+  border: 1px solid #5BC0EB;
+  color: #5BC0EB;
+}
+
 .submitButton:focus {
   outline: none;
   box-shadow: none;
-  border: none;
-  transform: translateY(1px);
-  filter: saturate(150%);
+  transform: translateY(3px);
 }
 
 .errorBox {
