@@ -56,3 +56,14 @@
   color: white;
   font-weight: bold;
 }
+
+.archiveContainer {
+  text-align: right;
+  width: 100%;
+  padding-right: 40px;
+  margin-bottom: 30px;
+}
+
+.archiveContainer > a {
+  color: gray;
+}

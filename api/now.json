@@ -1,0 +1,10 @@
+{
+  "builds": [
+    { "src": "gallery-password.js", "use": "@now/node" }
+  ],
+  "env": {
+    "SPACE_ID": "@space-id",
+    "ACCESS_TOKEN": "@access-token",
+    "PASSWORD": "@password"
+  }
+}

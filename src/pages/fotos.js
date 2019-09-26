@@ -11,6 +11,10 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <div className={photoStyles.archiveContainer}>
+        <a>Zugang zum Passwortgeschützten Fotoarchiv</a>
+      </div>
+
       <div className={photoStyles.gridContainer}>
         {data.allContentfulGallerieBild.nodes.map(node => {
           return (
@@ -35,7 +39,7 @@ export default ({ data }) => {
               style={loading ? { display: "none" } : {}}
               src={`https:${selectedPicture}`}
               onLoad={() => setLoading(false)}
-              alt="alt"
+              alt="picture"
             ></img>
           </div>
         </div>
