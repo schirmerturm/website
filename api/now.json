@@ -6,5 +6,11 @@
     "SPACE_ID": "@space-id",
     "ACCESS_TOKEN": "@access-token",
     "PASSWORD": "@password"
-  }
+  },
+  "routes": [
+    { "src": "/gallery-password", "dest": "/gallery-password.js", "headers": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "*"
+    }}
+  ]
 }

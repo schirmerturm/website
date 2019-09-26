@@ -30,10 +30,10 @@ module.exports = (req, res) => {
   client.getEntries({
     'content_type': 'privateGallerie'
   }).then((entries) => {
-    let images = []
+    let galleries = []
 
     entries.items.forEach((entry) => {
-      images.push({
+      galleries.push({
         title: entry.fields.name,
         link: entry.fields.link
       })
@@ -41,7 +41,7 @@ module.exports = (req, res) => {
 
     res.json({
       error: null,
-      images
+      galleries
     })
     return
 

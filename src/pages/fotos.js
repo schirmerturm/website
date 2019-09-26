@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Layout from "../components/layout"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import photoStyles from "./fotos.module.css"
 import { MdClose } from 'react-icons/md'
@@ -12,14 +12,14 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className={photoStyles.archiveContainer}>
-        <a>Zugang zum Passwortgeschützten Fotoarchiv</a>
+        <Link to='/gallerie'>Zugang zum Passwortgeschützten Fotoarchiv</Link>
       </div>
-
       <div className={photoStyles.gridContainer}>
         {data.allContentfulGallerieBild.nodes.map(node => {
           return (
             <div
               className={photoStyles.gridItem}
+              key={node.bild.file.url}
               onClick={() => {
                 setLoading(true)
                 setSelectedPicture(node.bild.file.url)
