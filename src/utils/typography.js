@@ -11,7 +11,7 @@ fairyGateTheme.overrideThemeStyles = ({rhythm}, options) => ({
     textDecoration: 'underline'
   },
   'p': {
-    color: 'rgb(29, 29, 29)'
+    color: 'rgb(15, 15, 15)'
   }
 })
 

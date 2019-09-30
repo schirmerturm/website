@@ -4,3 +4,27 @@
   border-radius: 4px;
   margin-bottom: 30px;
 }
+
+.expanded {
+  max-height: 2000px;
+  transition: max-height 600ms;
+  overflow: scroll;
+  margin-top: 50px;
+}
+
+.collapsed {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 600ms, margin-top 600ms;
+}
+
+.anschlagTitle {
+  margin: 0;
+}
+
+.question-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
