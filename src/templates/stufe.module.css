@@ -5,6 +5,10 @@
   margin-bottom: 30px;
 }
 
+.anschlagBox:hover {
+  cursor: pointer;
+}
+
 .expanded {
   max-height: 2000px;
   transition: max-height 600ms;
