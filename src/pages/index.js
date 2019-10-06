@@ -91,20 +91,30 @@ export default ({ data }) => {
       <div className={indexStyles.halfcover}>
         <Container>
           <div className={indexStyles.titleBar}>
-            <h1>Was ist pfadi?</h1>
+            <h1>Was ist Pfadi -  wer sind wir?</h1>
             <span className={indexStyles.more}>
               <Link to="/about">Mehr erfahren</Link>
             </span>
           </div>
           <p>
-            Die Pfadi ist die grösste Jugendorganisation der Schweiz. Bei den
-            wöchentlichen Aktivitäten am Samstag Nachmittag und in den Lagern
-            erlebt man bei Spiel, Sport und Spass einzigartige Abenteuer,
-            entdeckt die Natur und findet Freunde fürs Leben! Um ein
-            Altersgerechtes Programm zu gewährleisten, werden die Kinder
-            entsprechend ihrem Alters in 4 verschiedene Stufen unterteilt
-            (Biber, 4-6 Jahre; Wölfli, 6-10 Jahre; Pfader 10-15 Jahre; Pios
-            15-17 Jahre)
+            Die Pfadi ist die grösste Jugendorganisation der Schweiz. 
+            Bei den wöchentlichen Aktivitäten am Samstag Nachmittag und 
+            in den Lagern erlebt man bei Spiel, Sport und Spass einzigartige Abenteuer, 
+            entdeckt die Natur und findet Freunde fürs Leben! Um ein 
+            Altersgerechtes Programm zu gewährleisten, werden die Kinder 
+            entsprechend ihrem Alters in 4 verschiedene Stufen unterteilt 
+            (Biber, 4-6 Jahre; Wölfli, 6-10 Jahre; Pfader 10-15 Jahre; Pios 15-17 Jahre)
+            
+            Die Abteilung Schirmerturm mit ihrer Biberstufe, der Wolfsstufe Kaa-Akela, 
+            der Pfadistufe Schrimerturm und ihrer Piostufe hat insgesamt 
+            ca. 100 Mitglieder aus der ganzen Stadt Luzern und Umgebung, 
+            die meisten Kinder kommen aus den Quartieren Wesemlin, Unterlöchli, 
+            Bramberg, St. Karl, Altstadt, wir nehmen aber natürlich auch alle, 
+            die ausserhalb dieser Gebiete wohnen. Unsere Leiter organisieren 
+            wöchentlich abwechslungsreiche Aktivitäten in Luzern. Egal ob 
+            eine Schatzsuche mit Pirat Holzbein im Wald, Verbrecherjagd mit 
+            den Spezialagenten in der Stadt oder Grittibänzbacken im Pfadiheim, 
+            langweilig wird es nicht!
           </p>
         </Container>
       </div>
