@@ -104,7 +104,8 @@ export default ({ data }) => {
             Altersgerechtes Programm zu gewährleisten, werden die Kinder 
             entsprechend ihrem Alters in 4 verschiedene Stufen unterteilt 
             (Biber, 4-6 Jahre; Wölfli, 6-10 Jahre; Pfader 10-15 Jahre; Pios 15-17 Jahre)
-            
+          </p>
+          <p> 
             Die Abteilung Schirmerturm mit ihrer Biberstufe, der Wolfsstufe Kaa-Akela, 
             der Pfadistufe Schrimerturm und ihrer Piostufe hat insgesamt 
             ca. 100 Mitglieder aus der ganzen Stadt Luzern und Umgebung, 
