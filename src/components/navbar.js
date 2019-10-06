@@ -81,7 +81,7 @@ export default ({ children }) => {
                 <Link className={navbarStyles.underline} to="/stufen/pfadi">
                   Pfadi
                 </Link>
-                <Link className={navbarStyles.underline} to="/stufen/pio">
+                <Link className={navbarStyles.underline} to="/stufen/pios">
                   Pios
                 </Link>
               </Dropdown>

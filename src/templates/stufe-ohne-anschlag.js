@@ -7,6 +7,7 @@ export default ({ data }) => {
   const stufe = data.contentfulStufe
   return (
     <Layout>
+      <h1>{stufe.name}</h1>
       <UeberStufe stufe={stufe}/>
     </Layout>
   )
