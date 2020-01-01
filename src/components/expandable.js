@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import faqStyles from "./faq-question.module.css"
+import faqStyles from "./expandable.module.css"
 import { MdArrowDropDown } from 'react-icons/md'
 
-export default ({ question, answer }) => {
+export default ({ title, body }) => {
   const [isExpanded, setExpanded] = useState(false)
 
   function toggleExpanded() {
@@ -17,11 +17,11 @@ export default ({ question, answer }) => {
   return (
     <div className={faqStyles.container} onClick={toggleExpanded}>
       <div className={faqStyles.questionContainer}>
-        <h4>{question}</h4>
+        <h4>{title}</h4>
         <span><MdArrowDropDown size='1.5em'/></span>
       </div>
       <div className={answerContainerClasses}>
-        {documentToReactComponents(answer)}
+        {documentToReactComponents(body)}
       </div>
     </div>
   )

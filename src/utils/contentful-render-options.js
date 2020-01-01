@@ -2,6 +2,7 @@ import React from 'react'
 import { BLOCKS } from '@contentful/rich-text-types'
 import Carousel from '../components/carousel';
 import stufeStyles from '../components/ueber-stufe.module.css'
+import Expandable from '../components/expandable'
 
 const options = {
   renderNode: {
@@ -12,10 +13,15 @@ const options = {
             return renderBildKarussel(node)
           case "leiterPortrait":
             return renderLeiterPortrait(node)
+          case "dropdown":
+            return renderExpandable(node)
+          default:
+            return (<div id="unknown-content"></div>)
         }
       } catch (e) {
+        console.log(node)
         // If the entry type could not be determined, return an empty div
-        return <div></div>
+        return <div>Unknonw</div>
       }
     }
   }
@@ -36,6 +42,12 @@ const renderBildKarussel = (node) => {
   const nodes = node.data.target.fields.bilder['en-US']
   const urls = nodes.map(node => node.fields.file['en-US'].url)
   return <Carousel urls={urls} />
+}
+
+const renderExpandable = (node) => {
+  const title = node.data.target.fields.title['en-US']
+  const body = node.data.target.fields.beschreibung['en-US']
+  return <Expandable title={title} body={body} />
 }
 
 export default options
