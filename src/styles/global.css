@@ -11,3 +11,8 @@ html, body {
 p {
   color: rgb(82, 82, 82);
 }
+
+a:hover {
+  color: #ff7f11;
+  text-decoration: none;
+}
