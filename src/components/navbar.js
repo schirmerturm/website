@@ -91,6 +91,9 @@ export default ({ children }) => {
               <Link className={navbarStyles.underline} to="/fotos">
                 Fotos
               </Link>
+              <Link className={navbarStyles.underline} to="/kontakt">
+                Kontakt
+              </Link>
               <Link className={navbarStyles.underline} to="/FAQ">
                 FAQs
               </Link>
