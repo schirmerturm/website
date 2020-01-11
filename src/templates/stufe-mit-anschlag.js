@@ -29,7 +29,8 @@ export default ({ data }) => {
           // Prevent box from closing if user interacts with map
           if (
             e.target.classList.contains(stufeStyles.anschlagBox) ||
-            e.target.classList.contains(stufeStyles.titleContainer)
+            e.target.classList.contains(stufeStyles.titleContainer) ||
+            e.target.nodeName === "svg" || e.target.nodeName === "path"
           ) {
             setShowAnschlag(!showAnschlag)
           }

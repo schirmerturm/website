@@ -10,7 +10,7 @@
 .halfcover {
   width: 100vw;
   height: 60vh;
-  border-top: 5px solid #FF7F11;
+  border-top: 5px solid #ff7f11;
 }
 
 .center {
@@ -55,7 +55,7 @@
 }
 
 .newsPreview:hover {
-  border: 1px solid #FF7F11;
+  border: 1px solid #ff7f11;
 }
 
 .newsPreview:last-child {
@@ -98,4 +98,13 @@
 .scrollArrow:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+
+.footer {
+  border-top: 1px solid lightgray;
+  padding-top: 30px;
+}
+
+.sourceCode {
+  color: lightgray !important;
 }

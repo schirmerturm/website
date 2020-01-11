@@ -10,9 +10,6 @@ export default ({ urls }) => {
 
   const disableClick = urls.length > 1 ? "" : carouselStyles.singleImage
 
-  // Preload all images
-  urls.forEach(url => (new Image().src = url))
-
   // See Javascript Modulo Bug for negative numbers
   function moduloFix(a, n) {
     return ((a % n) + n) % n
@@ -27,6 +24,11 @@ export default ({ urls }) => {
     setLoading(true)
     setCurrentPic(moduloFix((operation(currentPic)), urls.length))
   }
+
+  useEffect(() => {
+    // Preload all images
+    urls.forEach(url => (new Image().src = url))
+  }, [urls])
 
   useEffect(() => {
     setTimeout(() => setShowCounter(false), 1000)
