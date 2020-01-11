@@ -27,6 +27,39 @@
   background-color: rgba(0, 0, 0, 0.103);
 }
 
+.singleImage {
+  cursor:not-allowed;
+}
+
+.loading {
+  visibility: hidden;
+}
+
+.loadingMessage {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.noOpacity {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.counter {
+  position: absolute;
+  text-align: center;
+  bottom: 5px;
+  padding: 10px;
+  background-color: rgba(199, 199, 199, 0.541);
+  border-radius: 4px;
+}
+
 #prevArrow {
   left: 0;
 }
