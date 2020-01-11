@@ -21,7 +21,7 @@ const options = {
       } catch (e) {
         console.log(node)
         // If the entry type could not be determined, return an empty div
-        return <div>Unknonw</div>
+        return <div>Unknown</div>
       }
     }
   }
@@ -31,10 +31,17 @@ const renderLeiterPortrait = (node) => {
   const { url } = node.data.target.fields.bild['en-US'].fields.file['en-US']
   const name = node.data.target.fields.name['en-US']
   const pfadiName = node.data.target.fields.pfadiName['en-US']
+  let funktion
+  if (node.data.target.fields.rolle) {
+    funktion = node.data.target.fields.rolle['en-US']
+  }
+
+  console.log(funktion)
   return (
   <div className={stufeStyles.portraitContainer}>
     <img className={stufeStyles.portrait} src={`https:${url}`} />
     <div>{name}, {pfadiName}</div>
+    <div className={stufeStyles.funktion}>{funktion}</div>
   </div>
 )}
 
