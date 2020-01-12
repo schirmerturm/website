@@ -1,69 +1,75 @@
-.gridContainer {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.gridItem {
-  width: 30%;
-  border-radius: 5px;
-  overflow: hidden;
-  margin: 10px;
-}
-
-.gridItem:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.dim {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pictureContainer {
-  width: 60vw;
-}
-
-.closeIcon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
-}
-
-.closeIcon:hover {
-  cursor: pointer;
-}
-
-.loader {
-  position: absolute;
-  z-index: 99;
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-}
-
 .archiveContainer {
-  text-align: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding-right: 40px;
   margin-bottom: 30px;
 }
 
-.archiveContainer > a {
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+}
+
+.archiveContainer h1 {
+  margin: 0;
+}
+
+.archiveContainer a {
   color: gray;
+}
+
+.sidebar {
+  width: 30%;
+  border-right: 1px solid rgb(194, 194, 194);
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  cursor: default;
+}
+
+.sidebar li {
+  list-style: none;
+  cursor: pointer;
+  padding: 5px;
+  color: rgb(80, 80, 80);
+  margin: 0;
+  margin-right: 8px;
+}
+
+.sidebar ul {
+  margin: 0;
+}
+
+.sidebar li:hover {
+  background-color: rgb(255, 199, 95);
+  border-radius: 3px;
+}
+
+.galleries {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery {
+  color: gray;
+  width: 50%;
+  padding: 20px;
+}
+
+.gallery img {
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.title {
+  margin-top: 10px;
 }
