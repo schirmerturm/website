@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import photoStyles from "./fotos.module.css"
+import Carousel from '../components/carousel'
 
 export default ({ data }) => {
   const [currentRubrik, setCurrentRubrik] = useState(null)
@@ -32,6 +33,7 @@ export default ({ data }) => {
           <Link to="/gallerie">Zugang zum Passwortgeschützten Fotoarchiv</Link>
         </span>
       </div>
+      <Carousel urls={["//images.ctfassets.net/q9prlle0c6ks/4TFzC2RjFaTEtq9Btd40uJ/72db16ea6717ed48e19ac1de61f9ae9e/IMG_7222.jpg"]}/>
       <div className={photoStyles.mainContainer}>
         <div className={photoStyles.sidebar}>
           <h3>Kategorien</h3>
