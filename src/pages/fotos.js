@@ -6,6 +6,7 @@ import photoStyles from "./fotos.module.css"
 import Carousel from '../components/carousel'
 
 export default ({ data }) => {
+  console.log(data)
   const [currentRubrik, setCurrentRubrik] = useState(null)
 
   const rubriken = Array.from(
@@ -33,7 +34,7 @@ export default ({ data }) => {
           <Link to="/gallerie">Zugang zum Passwortgeschützten Fotoarchiv</Link>
         </span>
       </div>
-      <Carousel urls={["//images.ctfassets.net/q9prlle0c6ks/4TFzC2RjFaTEtq9Btd40uJ/72db16ea6717ed48e19ac1de61f9ae9e/IMG_7222.jpg"]}/>
+      <Carousel urls={data.contentfulBildKarussel.bilder.map((f => f.file.url))}/>
       <div className={photoStyles.mainContainer}>
         <div className={photoStyles.sidebar}>
           <h3>Kategorien</h3>
@@ -55,6 +56,7 @@ export default ({ data }) => {
                 </a>
               </div>
             ))}
+            {!currentRubrik && <div className={photoStyles.noPicture}>Wähle links eine Rubrik</div>}
         </div>
       </div>
     </Layout>
@@ -63,6 +65,13 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
+    contentfulBildKarussel(name: {eq: "Karrusselphotos"}) {
+      bilder {
+        file {
+          url
+        }
+      }
+    }
     allContentfulOffentlicheGallerie {
       edges {
         node {
