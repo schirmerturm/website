@@ -23,6 +23,17 @@ export default () => {
       {galleries != null && (
         <div>
           <h3>Links:</h3>
+           <p>
+            Hast du Lust wieder einmal in einmaligen Pfadi-Erinnerungen zu schwelgen 
+            oder suchst du ein cooles Pfadifoto von dir? So bist du hier genau richtig!
+            Auf dieser Seite hast du als Teilnehmer Einblick in ein umfangreiches Fotoarchiv 
+            und weiter spannende Erinnerungen der Abteilung Schirmerturm.
+          </p>
+          <p>
+            Wichtig: Es kann gut sein, dass die Videos und Diashows nicht online angeschaut 
+            werden können. Dann müsst ihr die Filme herunterladen. Dazu im Google Photos Ordner 
+            oben links auf die 3 Punkte klicken (Weitere Optionen) und dann "Alles Herunterladen". 
+          </p>
           {galleries.map(gallery => (
             <div key={gallery.link}>
               <a href={gallery.link}>{gallery.title}</a>
