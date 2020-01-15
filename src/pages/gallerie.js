@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import useGalleryAuth from "../hooks/use-gallery-auth"
 import galleryStyles from "./gallerie.module.css"
+import { Helmet } from "react-helmet"
 
 export default () => {
   const [loading, error, tryAuth, galleries] = useGalleryAuth()
@@ -18,6 +19,9 @@ export default () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Gallerie - Schirmerturm</title>
+      </Helmet>
       {error != null && <div className={galleryStyles.errorBox}>{error}</div>}
       <h1>Gallerie</h1>
       {galleries != null && (

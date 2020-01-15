@@ -4,9 +4,9 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import photoStyles from "./fotos.module.css"
 import Carousel from '../components/carousel'
+import { Helmet } from 'react-helmet'
 
 export default ({ data }) => {
-  console.log(data)
   const [currentRubrik, setCurrentRubrik] = useState(null)
 
   const rubriken = Array.from(
@@ -28,6 +28,9 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Fotos - Schirmerturm</title>
+      </Helmet>
       <div className={photoStyles.archiveContainer}>
         <h1>Fotos</h1>
         <span>

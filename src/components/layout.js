@@ -4,6 +4,7 @@ import NavBar from "./navbar"
 import layoutStyles from "./layout.module.css"
 import BackgroundImage from "gatsby-background-image"
 import { StaticQuery, graphql } from "gatsby"
+import { Helmet } from 'react-helmet'
 
 export default ({ children }) => {
   return (
@@ -18,6 +19,11 @@ export default ({ children }) => {
     }`}
     render={data => (
       <NavBar>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+          <title>Schirmerturm</title>
+        </Helmet>
         <div className={layoutStyles.headerImage}>
           <BackgroundImage fluid={data.file.childImageSharp.fluid}>
             <div className={layoutStyles.fillBackground}></div>

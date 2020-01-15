@@ -19,7 +19,6 @@ const options = {
             return (<div id="unknown-content"></div>)
         }
       } catch (e) {
-        console.log(node)
         // If the entry type could not be determined, return an empty div
         return <div>Unknown</div>
       }
@@ -36,7 +35,6 @@ const renderLeiterPortrait = (node) => {
     funktion = node.data.target.fields.rolle['en-US']
   }
 
-  console.log(funktion)
   return (
   <div className={stufeStyles.portraitContainer}>
     <img className={stufeStyles.portrait} src={`https:${url}`} />

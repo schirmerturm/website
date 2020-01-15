@@ -4,10 +4,14 @@ import { graphql, Link } from "gatsby"
 import newsStyle from "./news.module.css"
 import moment from "moment"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { Helmet } from 'react-helmet'
 
 export default ({ data }) => {
   return (
     <Layout>
+      <Helmet>
+        <title>News - Schirmerturm</title>
+      </Helmet>
       <h1>News</h1>
       <h3 className="subTitle">
         Hier findest du die letzten News unserer Abteilung

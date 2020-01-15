@@ -3,10 +3,14 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import moment from 'moment'
+import { Helmet } from 'react-helmet'
 
 export default ({ data }) => {
   return (
     <Layout>
+      <Helmet>
+        <title>{data.contentfulNewspost.titel}</title>
+      </Helmet>
       <h1>{data.contentfulNewspost.titel}</h1>
       <div style={{
         marginBottom: 20,
