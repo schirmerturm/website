@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import photoStyles from "./fotos.module.css"
 import Carousel from '../components/carousel'
 import { Helmet } from 'react-helmet'
+import moment from 'moment'
 
 export default ({ data }) => {
   const [currentRubrik, setCurrentRubrik] = useState(null)
@@ -23,6 +24,7 @@ export default ({ data }) => {
       fluid: edge.node.vorschau.fluid,
       title: edge.node.titel,
       link: edge.node.link,
+      date: edge.node.datum
     })
   })
 
@@ -51,7 +53,8 @@ export default ({ data }) => {
         </div>
         <div className={photoStyles.galleries}>
           {currentRubrik &&
-            rubrikToData[currentRubrik].map(d => (
+            rubrikToData[currentRubrik]
+            .sort((a, b) => moment(a.date).isBefore(b.date) ? 1 : -1).map(d => (
               <div key={d.title} className={photoStyles.gallery}>
                 <a href={d.link}>
                   <Img fluid={d.fluid} />
@@ -93,6 +96,7 @@ export const query = graphql`
           }
           titel
           link
+          datum
         }
       }
     }
