@@ -120,7 +120,6 @@
 
   .mobileCover {
     display: block;
-    padding-top: 50px;
     height: 50vh;
   }
 
@@ -129,7 +128,6 @@
   }
 
   .halfcover {
-    padding-top: 20px;
     height: auto;
   }
 

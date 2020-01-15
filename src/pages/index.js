@@ -65,13 +65,18 @@ export default ({ data }) => {
           />
         </BackgroundImage>
       </div>
-      {/* <div className={indexStyles.mobileCover}>
-        <div className={indexStyles.center}>
-          <div className={indexStyles.logoContainer}>
-            <Img fluid={logoImg}></Img>
+      <div className={indexStyles.mobileCover}>
+        <BackgroundImage
+          fluid={backgroundImg}
+          className={indexStyles.bgimage}
+        >
+          <div className={indexStyles.center}>
+            <div className={indexStyles.logoContainer}>
+              <Img fluid={logoImg}></Img>
+            </div>
           </div>
-        </div>
-      </div> */}
+        </BackgroundImage>
+      </div>
       <div className={indexStyles.halfcover}>
         <Container>
           <div className={indexStyles.titleBar}>
@@ -103,6 +108,13 @@ export default ({ data }) => {
           fluid={backgroundImg2}
           className={indexStyles.bgimage}
         ></BackgroundImage>
+      </div>
+      <div className={indexStyles.mobileCover}>
+        <BackgroundImage
+          fluid={backgroundImg2}
+          className={indexStyles.bgimage}
+        >
+        </BackgroundImage>
       </div>
       <div className={indexStyles.halfcover}>
         <Container>

@@ -110,4 +110,8 @@
   .gallery {
     padding: 10px;
   }
+
+  .sidebar li:hover {
+    background-color: none;
+  }
 }
