@@ -9,3 +9,9 @@
   padding: 60px;
   text-align: left;
 }
+
+@media only screen and (max-width: 800px) {
+  .content {
+    padding: 20px;
+  }
+}

@@ -108,3 +108,31 @@
 .sourceCode {
   color: lightgray !important;
 }
+
+.mobileCover {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .cover {
+    display: none;
+  }
+
+  .mobileCover {
+    display: block;
+    padding-top: 50px;
+    height: 50vh;
+  }
+
+  .newsPreviewContainer {
+    flex-wrap: wrap;
+  }
+
+  .halfcover {
+    height: auto;
+  }
+
+  .newsPreview {
+    margin-bottom: 20px;
+  }
+}

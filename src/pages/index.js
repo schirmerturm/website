@@ -8,7 +8,7 @@ import Img from "gatsby-image"
 import moment from "moment"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { FiChevronsDown } from "react-icons/fi"
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet"
 
 export default ({ data }) => {
   let logoImg
@@ -38,9 +38,12 @@ export default ({ data }) => {
   return (
     <NavBar>
       <Helmet>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-          <title>Schirmerturm</title>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
+        <title>Schirmerturm</title>
       </Helmet>
       <div className={indexStyles.cover}>
         <BackgroundImage
@@ -62,6 +65,13 @@ export default ({ data }) => {
           />
         </BackgroundImage>
       </div>
+      {/* <div className={indexStyles.mobileCover}>
+        <div className={indexStyles.center}>
+          <div className={indexStyles.logoContainer}>
+            <Img fluid={logoImg}></Img>
+          </div>
+        </div>
+      </div> */}
       <div className={indexStyles.halfcover}>
         <Container>
           <div className={indexStyles.titleBar}>
