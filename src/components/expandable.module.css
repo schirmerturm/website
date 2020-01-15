@@ -20,7 +20,7 @@
 
 .expanded {
   padding: 15px;
-  max-height: 200px;
+  max-height: 600px;
   overflow: scroll;
   border-top: 1px solid rgb(190, 190, 190);
 }
@@ -33,5 +33,10 @@
 }
 
 .answerContainer {
-  transition: max-height 0.3s, padding 0.3s;
+  transition: max-height 0.5s, padding 0.5s;
+  -ms-overflow-style: none;
+}
+
+.answerContainer::-webkit-scrollbar {
+  display: none;
 }
