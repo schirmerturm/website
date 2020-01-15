@@ -9,18 +9,24 @@ export default ({ title, children, titleClassName, disabled }) => {
   }
 
   if (disabled) {
-    return <div className={dropdownStyles.disabled}>{children}</div>
+    return (
+      <div>
+        <a className={dropdownStyles.disabledTitle}>{title}</a>
+        <div className={dropdownStyles.disabled}>{children}</div>
+      </div>
+    )
   }
 
   return (
-    <div className={dropdownStyles.dropdownContainer} onMouseEnter={toggleCollapse} onMouseLeave={toggleCollapse}>
-      <a className={`${dropdownStyles.title} ${titleClassName}`}>
-        {title}
-      </a>
-      {isCollapsed || <div className={dropdownStyles.dropdownBox}>
-        {children}
-      </div>
-      }
+    <div
+      className={dropdownStyles.dropdownContainer}
+      onMouseEnter={toggleCollapse}
+      onMouseLeave={toggleCollapse}
+    >
+      <a className={`${dropdownStyles.title} ${titleClassName}`}>{title}</a>
+      {isCollapsed || (
+        <div className={dropdownStyles.dropdownBox}>{children}</div>
+      )}
     </div>
   )
 }

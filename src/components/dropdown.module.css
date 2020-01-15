@@ -24,3 +24,8 @@
   flex-direction: column;
   padding-left: 15px;
 }
+
+.disabledTitle {
+  color: gray !important;
+  display: block;
+}
