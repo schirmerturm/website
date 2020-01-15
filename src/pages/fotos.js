@@ -62,7 +62,7 @@ export default ({ data }) => {
                 </a>
               </div>
             ))}
-            {!currentRubrik && <div className={photoStyles.noPicture}>Wähle links eine Rubrik</div>}
+            {!currentRubrik && <div className={photoStyles.noPicture}>Wähle eine Rubrik</div>}
         </div>
       </div>
     </Layout>

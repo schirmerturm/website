@@ -80,3 +80,34 @@
   text-align: center;
   color: gray;
 }
+
+@media only screen and (max-width: 800px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-bottom: 1px solid rgb(194, 194, 194);
+    border-right: none;
+    padding-bottom: 14px;
+  }
+
+  .archiveContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .archiveContainer h1 {
+    margin-bottom: 10px;
+  }
+
+  .galleries {
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .gallery {
+    padding: 10px;
+  }
+}
