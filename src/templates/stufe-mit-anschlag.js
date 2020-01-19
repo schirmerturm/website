@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Layout from "../components/layout"
-import moment from "moment"
+import moment from "moment-timezone"
 import { graphql } from "gatsby"
 import UeberStufe from "../components/ueber-stufe"
 import AnschlagMap from "../components/anschlag-map"
@@ -14,8 +14,8 @@ export default ({ data }) => {
   const [showAnschlag, setShowAnschlag] = useState(false)
 
   function formatTime(time) {
-    const timeFormat = "dd DD.MM.YYYY hh:mm"
-    return moment(time)
+    const timeFormat = "dd DD.MM.YYYY HH:mm"
+    return moment(time).tz("Europe/Berlin")
       .locale("de-DE")
       .format(timeFormat)
   }

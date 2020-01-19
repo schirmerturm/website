@@ -29,6 +29,7 @@
     "gatsby-transformer-sharp": "^2.2.14",
     "intersection-observer": "^0.7.0",
     "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
